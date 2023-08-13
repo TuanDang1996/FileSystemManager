@@ -35,8 +35,15 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - ansible/install:
-          version: 2.6.5
+      - run:
+          name: Install Ansible
+          command: |
+            python3 -m venv env
+            . env/bin/activate
+            pip install ansible
+            pip install -r requirements.txt
+            sudo apt update
+            sudo apt install rsync
       - run:
           name: Add ssh public key
           command: |
