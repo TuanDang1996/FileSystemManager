@@ -36,6 +36,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install System Packages
+          command: pip install --upgrade pip && pip install ansible
+      - run:
           name: Add ssh public key
           command: |
             echo "$SSH_KEY" > $HOME/.ssh/id_rsa
