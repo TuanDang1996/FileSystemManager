@@ -40,9 +40,11 @@ jobs:
           name: Deploy application
           command: |
             cd ./ansible
+            . env/bin/activate
             ansible-playbook -i hosts docker.yml
             ansible-playbook -i hosts mounting_ebs.yml
             ansible-playbook -i hosts deploy.yml
+            cd ..
 workflows:
   deploy-workflow:
     jobs:
