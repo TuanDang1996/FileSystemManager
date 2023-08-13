@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f14666e-d222-4d60-ad25-e01ea9ea3c45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ansible/ec2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ansible/ec3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/.terraform.lock.hcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/terraform.tfstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/terraform.tfstate.backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/tfplan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/version.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infra/version.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +110,7 @@
       <updated>1691822070351</updated>
       <workItem from="1691822072016" duration="6875000" />
       <workItem from="1691829019183" duration="36967000" />
-      <workItem from="1691920754767" duration="12221000" />
+      <workItem from="1691920754767" duration="12328000" />
     </task>
     <servers />
   </component>
