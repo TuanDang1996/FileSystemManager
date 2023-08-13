@@ -32,9 +32,6 @@ jobs:
             python3 -m venv env
             . env/bin/activate
             pip3 install ansible
-            pip3 install -r requirements.txt
-            sudo apt update
-            sudo apt install rsync
       - run:
           name: Add ssh public key
           command: |
