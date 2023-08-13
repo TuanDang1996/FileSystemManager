@@ -34,10 +34,11 @@ jobs:
       - image: python:3.11.4-alpine3.18
     steps:
       - checkout
-#      - run:
-#          name: Add ssh public key
-#          command: |
-#            echo "$SSH_KEY" > ./ansible/ec2.pem
+      - run:
+          name: Add ssh public key
+          command: |
+            echo $SSH_KEY
+            echo $SSH_KEY > ./ansible/ec2
       - run:
           name: Install dependencies
           command: |
