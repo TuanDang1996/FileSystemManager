@@ -35,7 +35,7 @@ jobs:
           name: Provision infra
           command: |
             cd ./infra
-            terraform init init -get=true -input=false -reconfigure -backend-config="bucket=test-terraform-state-527552148303" -backend-config="key=terraform.tfstate" -backend-config="region=ap-southeast-1"
+            terraform init -get=true -input=false -reconfigure -backend-config="bucket=test-terraform-state-527552148303" -backend-config="key=terraform.tfstate" -backend-config="region=ap-southeast-1"
             terraform plan -out tfapply
             terraform apply tfapply
   deploy-application:
