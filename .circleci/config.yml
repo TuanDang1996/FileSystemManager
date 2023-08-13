@@ -32,18 +32,16 @@ jobs:
   deploy-application:
     working_directory: /tmp/project/ansible
     docker:
-      - image: ansible/ansible:ubuntu1604
+      - image: python:3.9.0-alpine
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints: [ "76:ce:16:75:1a:31:ee:0c:da:ca:2d:5c:b0:f3:f4:e0" ]
       - run:
-          name: Install System Packages
-          command: | 
-            pip install --upgrade pip 
-            pip install ansible
-      - run:
-          name: Add ssh public key
+          name: Install dependencies
           command: |
-            echo "$SSH_KEY" > $HOME/.ssh/id_rsa
+            apk add --update ansible
+            ansible --version
       - run:
           name: Deploy application
           command: |
@@ -53,8 +51,8 @@ jobs:
 workflows:
   deploy-workflow:
     jobs:
-      - build-and-publish-image
+#      - build-and-publish-image
 #      - provision-infra
-      - deploy-application:
-          requires:
-            - build-and-publish-image
+      - deploy-application
+#          requires:
+#            - build-and-publish-image
