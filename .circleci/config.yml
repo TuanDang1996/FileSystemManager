@@ -1,0 +1,55 @@
+version: 2.1
+jobs:
+  build-and-publish-image:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: Build application
+          command: |
+            echo "put code to build application here"
+      - run:
+          name: Publish Image
+          command: |
+            echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+            docker build -t file-management:latest .
+            docker tag tuandanghtt1996/file-management-system:latest file-management:latest
+            docker push tuandanghtt1996/file-management-system:latest
+  provision-infra:
+    working_directory: /tmp/project
+    docker:
+      - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
+    steps:
+      - checkout
+      - run:
+          name: Provision infra
+          command: |
+            cd ./infra
+            terraform init init -get=true -input=false -reconfigure -backend-config="bucket=test-terraform-state-527552148303" -backend-config="key=terraform.tfstate" -backend-config="region=ap-southeast-1"
+            terraform plan -out tfapply
+            terraform apply tfapply
+  deploy-application:
+    working_directory: /tmp/project
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - ansible/install:
+          version: 2.6.5
+      - run:
+          name: Add ssh public key
+          command: |
+            echo "$SSH_KEY" > $HOME/.ssh/id_rsa
+      - run:
+          name: Deploy application
+          command: |
+            ansible-playbook -i hosts docker.yml
+            ansible-playbook -i hosts mounting_ebs.yml
+            ansible-playbook -i hosts deploy.yml
+workflows:
+  deploy-workflow:
+    jobs:
+      - build-and-publish-image
+#      - provision-infra
+      - deploy-application
