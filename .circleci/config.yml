@@ -37,7 +37,9 @@ jobs:
       - checkout
       - run:
           name: Install System Packages
-          command: pip install --upgrade pip && pip install ansible
+          command: | 
+            pip install --upgrade pip 
+            pip install ansible
       - run:
           name: Add ssh public key
           command: |
