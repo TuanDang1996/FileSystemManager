@@ -37,7 +37,7 @@ jobs:
             terraform init -get=true -input=false -reconfigure -backend-config="bucket=test-terraform-state-527552148303" -backend-config="key=terraform.tfstate" -backend-config="region=ap-southeast-1"
             terraform plan -out tfapply
             terraform apply tfapply
-            public_ip=$(terraform output public_ip)
+            public_ip=$(terraform output public_ip | tr -d '\"')
             echo [remote]$'\n'$public_ip > ../ansible/hosts
       - persist_to_workspace:
           root: .
@@ -56,9 +56,6 @@ jobs:
             content=$(echo $SSH_KEY | tr ' ' '\n')
             echo "-----BEGIN OPENSSH PRIVATE KEY-----\n$content\n-----END OPENSSH PRIVATE KEY-----\n" > ./ansible/ec2
             chmod 0600 ./ansible/ec2
-            chmod 0600 ./ansible/hosts
-            
-            cat ./ansible/hosts
       - run:
           name: Install dependencies
           command: |
