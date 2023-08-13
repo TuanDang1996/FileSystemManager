@@ -53,8 +53,8 @@ jobs:
 workflows:
   deploy-workflow:
     jobs:
-#      - build-and-publish-image
+      - build-and-publish-image
 #      - provision-infra
-      - deploy-application
-#          requires:
-#            - build-and-publish-image
+      - deploy-application:
+          requires:
+            - build-and-publish-image
