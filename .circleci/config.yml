@@ -23,7 +23,7 @@ jobs:
     docker:
       - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
       - image: cimg/aws:2022.06
-    environments:
+    environment:
       AWS_REGION: "ap-southeast-1"
     steps:
       - checkout
