@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   cicd:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/python:3.11.4
       - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
     steps:
       - checkout
@@ -29,7 +29,6 @@ jobs:
       - run:
           name: Install Ansible
           command: |
-            apt install python3.8-venv
             python3 -m venv env
             . env/bin/activate
             pip3 install ansible
