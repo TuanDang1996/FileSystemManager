@@ -3,4 +3,3 @@ infra/terraform*
 infra/tfplan
 infra/.terraform.lock.hcl
 ansible/ec2
-ansible/hosts

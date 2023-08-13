@@ -48,8 +48,8 @@ jobs:
       - image: python:3.11.4-alpine3.18
     steps:
       - checkout
-      - attach_workspace:
-          at: .
+#      - attach_workspace:
+#          at: .
       - run:
           name: Add ssh key
           command: |
@@ -72,7 +72,7 @@ workflows:
   deploy-workflow:
     jobs:
 #      - build-and-publish-image
-      - provision-infra
-      - deploy-application:
-          requires:
-            - provision-infra
+#      - provision-infra
+      - deploy-application
+#          requires:
+#            - provision-infra
