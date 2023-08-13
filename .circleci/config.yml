@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build-and-publish-image:
+  cicd:
     docker:
       - image: cimg/base:stable
       - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
