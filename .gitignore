@@ -2,3 +2,4 @@ infra/.terraform
 infra/terraform*
 infra/tfplan
 infra/.terraform.lock.hcl
+ansible/ec2
