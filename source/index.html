@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>File Upload</title>
+  </head>
+  <body>
+    <h1>File Upload</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+    <br/>
+    <br/>
+    <h1>Retrieve file</h1>
+   <form method="GET" action="/retrieveFile">
+      <p><input type="input" name="filename"></p>
+      <p><input type="submit" value="Get"></p>
+    </form>
+  <br/>
+    <br/>
+    <h1>Delete file</h1>
+   <form method="GET" action="/deleteFile">
+      <p><input type="input" name="filename"></p>
+      <p><input type="submit" value="Delete"></p>
+    </form>
+  </body>
+</html>

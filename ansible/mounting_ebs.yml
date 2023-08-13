@@ -1,0 +1,24 @@
+---
+- name: "Mounting EBS"
+  hosts: remote
+  become: yes
+  user: ec2-user
+  tasks:
+    - name: Create and mount uploads folder
+      shell: |
+        mkdir -p /mnt/uploads
+        chmod 600 /mnt/uploads
+
+        #check whether if we need to format disk or not
+        disk_type=$(file -s /dev/xvdh)
+        if [[ "$disk_type" = *data ]]
+        then
+          mkfs -t xfs /dev/xvdh
+        fi
+
+        #check whether if we need to format disk or not
+        mount_val=$(mount | grep "/dev/xvdh")
+        if [[ -z "$mount_val" ]]
+        then
+          mount -t xfs /dev/xvdh /mnt/uploads
+        fi

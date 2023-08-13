@@ -1,0 +1,25 @@
+---
+- name: "Deploy your application"
+  hosts: remote
+  user: ec2-user
+  become: yes
+  vars:
+    docker_username: "{{ lookup('env', 'DOCKER_USERNAME') }}"
+    docker_password: "{{ lookup('env', 'DOCKER_PASSWORD') }}"
+  tasks:
+    - name: Update docker-compose file on the server
+      copy:
+        src: ../docker-compose.yml
+        dest: /home/ec2-user
+        owner: ec2-user
+        group: ec2-user
+        mode: 0644
+    - name: Restart docker daemon
+      shell: "systemctl restart docker"
+    - name: Login to DockerHub remote registry
+      shell: "echo '{{ docker_password }}' | docker login -u {{ docker_username }} --password-stdin"
+      no_log: true
+    - name: Pull latest version form docker hub
+      shell: "docker pull tuandanghtt1996/file-management-system:latest"
+    - name: Start the application
+      shell: "docker-compose up -d"

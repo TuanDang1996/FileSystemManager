@@ -1,0 +1,15 @@
+version: "3"
+
+networks:
+  my_network:
+    driver: bridge
+services:
+  app:
+    networks:
+      - my_network
+    image: tuandanghtt1996/file-management-system:latest
+    ports:
+      - "80:5000"
+    restart: always
+    volumes:
+      - /mnt/uploads:/app/uploads

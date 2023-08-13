@@ -1,0 +1,26 @@
+---
+- name: "AWS - Install docker"
+  hosts: remote
+  become: yes
+  user: ec2-user
+  tasks:
+    - name: Update all packages
+      shell: "sudo yum update -y"
+    - name: install docker
+      shell: "sudo yum install -y docker"
+    - name: Enable docker.service
+      systemd:
+        name: docker.service
+        daemon_reload: true
+        enabled: true
+    - name: Enable containerd.service
+      systemd:
+        name: containerd.service
+        daemon_reload: true
+        enabled: true
+    - name: install docker compose
+      shell: |
+        sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose 
+        sudo chmod +x /usr/local/bin/docker-compose
+    - name: verify docker-compose
+      shell: "docker-compose --version"
