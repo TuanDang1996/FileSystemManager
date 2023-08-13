@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f14666e-d222-4d60-ad25-e01ea9ea3c45" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ansible/ansible.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/ansible/ansible.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/.terraform.lock.hcl" beforeDir="false" afterPath="$PROJECT_DIR$/infra/.terraform.lock.hcl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/TEST.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/modules/ec2/ssh-key.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infra/modules/ec2/ssh-key.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/terraform.tfstate" beforeDir="false" afterPath="$PROJECT_DIR$/infra/terraform.tfstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/terraform.tfstate.backup" beforeDir="false" afterPath="$PROJECT_DIR$/infra/terraform.tfstate.backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/tfplan" beforeDir="false" afterPath="$PROJECT_DIR$/infra/tfplan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ansible/ec2.pem" beforeDir="false" afterPath="$PROJECT_DIR$/ansible/ec2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +110,7 @@
       <updated>1691822070351</updated>
       <workItem from="1691822072016" duration="6875000" />
       <workItem from="1691829019183" duration="36967000" />
-      <workItem from="1691920754767" duration="6884000" />
+      <workItem from="1691920754767" duration="7175000" />
     </task>
     <servers />
   </component>
