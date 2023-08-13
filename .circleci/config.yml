@@ -22,7 +22,6 @@ jobs:
   provision-infra:
     docker:
       - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
-      - image: cimg/aws:2022.06
     environment:
       AWS_REGION: "ap-southeast-1"
     steps:
@@ -38,11 +37,20 @@ jobs:
             terraform init -get=true -input=false -reconfigure -backend-config="bucket=test-terraform-state-527552148303" -backend-config="key=terraform.tfstate" -backend-config="region=ap-southeast-1"
             terraform plan -out tfapply
             terraform apply tfapply
+            
+            public_ip=$(terraform output public_ip)
+            echo [remote]$'\n'$public_ip > ../ansible/hosts
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ansible/hosts
   deploy-application:
     docker:
       - image: python:3.11.4-alpine3.18
     steps:
       - checkout
+      - attach_workspace:
+          at: .
       - run:
           name: Add ssh key
           command: |
@@ -65,6 +73,6 @@ workflows:
     jobs:
 #      - build-and-publish-image
       - provision-infra
-#      - deploy-application
-#          requires:
-#            - build-and-publish-image
+      - deploy-application:
+          requires:
+            - provision-infra
