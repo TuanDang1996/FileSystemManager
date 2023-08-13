@@ -17,7 +17,6 @@ resource "aws_security_group" "webserver-security-group" {
   name        = "Web Server Security Group"
   description = "Enable HTTP/HTTPS access on Port 80/443 via ALB and SSH access on Port 22"
   vpc_id      = var.vpc_id
-#  vpc_id      = aws_vpc.vpc.id
   ingress {
     description     = "SSH Access"
     from_port       = 22

@@ -15,6 +15,7 @@ module "ec2" {
   source = "./modules/ec2"
   sg_id = module.security_group.sg_id
   public_subnet_id = module.vpc.public_subnet_id
+  public_key = var.public_key
 }
 
 output "public_ip" {

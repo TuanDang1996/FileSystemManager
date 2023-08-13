@@ -25,7 +25,7 @@ resource "aws_instance" "web" {
   instance_type               = "${var.instance_type}"
   key_name                    = "${var.key_name}"
   associate_public_ip_address = true
-  security_groups             = [var.sg_id]
+  vpc_security_group_ids      = [var.sg_id]
   subnet_id                   = var.public_subnet_id
 
   lifecycle {
