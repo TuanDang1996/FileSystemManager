@@ -22,6 +22,12 @@ jobs:
       - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
     steps:
       - checkout
+      - aws-cli/setup:
+          role-arn: 'arn:aws:iam::527552148303:role/circleci-role'
+          aws-region: "ap-southeast-1"
+          profile-name: "OIDC-PROFILE"
+          role-session-name: “example-session”
+          session-duration: 1800
       - run:
           name: Provision infra
           command: |
@@ -35,7 +41,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Add ssh public key
+          name: Add ssh key
           command: |
             content=$(echo $SSH_KEY | tr ' ' '\n')
             echo "-----BEGIN OPENSSH PRIVATE KEY-----\n${content}\n-----END OPENSSH PRIVATE KEY-----\n" > ./ansible/ec2
@@ -55,7 +61,7 @@ workflows:
   deploy-workflow:
     jobs:
 #      - build-and-publish-image
-#      - provision-infra
-      - deploy-application
+      - provision-infra
+#      - deploy-application
 #          requires:
 #            - build-and-publish-image
