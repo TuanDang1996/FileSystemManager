@@ -22,14 +22,15 @@ jobs:
   provision-infra:
     docker:
       - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
+      - image: cimg/aws:2022.06
+    environments:
+      AWS_REGION: "ap-southeast-1"
     steps:
       - checkout
       - aws-cli/setup:
-          role-arn: 'arn:aws:iam::527552148303:role/circleci-role'
-          aws-region: "ap-southeast-1"
-          profile-name: "OIDC-PROFILE"
-          role-session-name: “example-session”
-          session-duration: 1800
+          role-arn: "arn:aws:iam::527552148303:role/circleci-role"
+          role-session-name: "example-session"
+          session-duration: "1800"
       - run:
           name: Provision infra
           command: |
