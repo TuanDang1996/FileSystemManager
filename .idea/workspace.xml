@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f14666e-d222-4d60-ad25-e01ea9ea3c45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ansible/hosts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infra/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/modules/ec2/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infra/modules/ec2/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/modules/ec2/ssh-key.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infra/modules/ec2/ssh-key.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/modules/sg/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infra/modules/sg/main.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +109,7 @@
       <updated>1691822070351</updated>
       <workItem from="1691822072016" duration="6875000" />
       <workItem from="1691829019183" duration="36967000" />
-      <workItem from="1691920754767" duration="18317000" />
+      <workItem from="1691920754767" duration="18452000" />
     </task>
     <servers />
   </component>
