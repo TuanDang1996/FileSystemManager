@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Add ssh public key
           command: |
-            echo "$SSH_KEY" > ~/.ssh/id_rsa
+            echo "$SSH_KEY" > ./ec2.pem
       - run:
           name: Install dependencies
           command: |
