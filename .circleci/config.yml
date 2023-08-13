@@ -39,7 +39,7 @@ jobs:
             terraform apply tfapply
             
             public_ip=$(terraform output public_ip)
-            echo [remote]$'\n'$public_ip > ../ansible/hosts
+            echo "[remote]\n${public_ip}" > ../ansible/hosts
       - persist_to_workspace:
           root: .
           paths:
@@ -57,6 +57,7 @@ jobs:
             content=$(echo $SSH_KEY | tr ' ' '\n')
             echo "-----BEGIN OPENSSH PRIVATE KEY-----\n${content}\n-----END OPENSSH PRIVATE KEY-----\n" > ./ansible/ec2
             chmod 0600 ./ansible/ec2
+            chmod 0600 ./ansible/hosts
       - run:
           name: Install dependencies
           command: |
