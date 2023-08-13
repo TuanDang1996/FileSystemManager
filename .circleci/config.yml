@@ -32,6 +32,8 @@ jobs:
   deploy-application:
     docker:
       - image: python:3.9.0-alpine
+    environment:
+      ANSIBLE_HOST_KEY_CHECKING: False
     steps:
       - checkout
       - add_ssh_keys:
