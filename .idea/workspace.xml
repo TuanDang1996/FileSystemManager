@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f14666e-d222-4d60-ad25-e01ea9ea3c45" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/local_run.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/local_run.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,9 +65,9 @@
       <recent name="$PROJECT_DIR$/ansible" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/local" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/source" />
     </key>
   </component>
@@ -113,7 +112,7 @@
       <workItem from="1691829019183" duration="36967000" />
       <workItem from="1691920754767" duration="21926000" />
       <workItem from="1691979578798" duration="6000" />
-      <workItem from="1691979592906" duration="7724000" />
+      <workItem from="1691979592906" duration="8077000" />
     </task>
     <servers />
   </component>

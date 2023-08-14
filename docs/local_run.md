@@ -19,11 +19,11 @@ If you want to test the application, you can do these steps:
 ##### Prerequisite:
 
 There are some prerequisites before start provision infra and deploy:
-- Setup aws environment: install [aws-cli](#https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), after that follow [this user guide](#https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html) to set up aws profile on the local machine.
-- Install terraform: follow [this user guide](#https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) to install terraform
-- Install Ansible: follow [this user guide](#https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) to install ansible
+- Setup aws environment: install [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), after that follow [this user guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html) to set up aws profile on the local machine.
+- Install terraform: follow [this user guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) to install terraform
+- Install Ansible: follow [this user guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) to install ansible
 - Generate ssh key: run the command **_ssh-keygen -t RSA_** to generate the ssh key
-- Create S3 bucket to store terraform state: create a bucket on AWS S3 to store tfstate file
+- Create S3 bucket: create a S3 bucket on AWS to store tfstate file
 - Set up environment variables:
   1. export DOCKER_USERNAME={username} : username of docker hub repository
   2. export DOCKER_PASSWORD={password}: password for the username
