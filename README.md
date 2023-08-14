@@ -8,12 +8,12 @@
 ### Tech stacks
 This project is using these tech stacks: 
 
-- Backend: Python
-- Containerize: Docker, Docker Compose
-- Cloud Native: AWS
-- Infrastructure as Code: Terraform
-- Configuration as Code: Ansible
-- CI tool: Circle CI
+- Backend: _Python_
+- Containerize: _Docker, Docker Compose_
+- Cloud Native: _AWS_
+- Infrastructure as Code: _Terraform_
+- Configuration as Code: _Ansible_
+- CI tool: _Circle CI_
 
 ### Architecture
 
