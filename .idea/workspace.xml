@@ -4,7 +4,7 @@
     <list default="true" id="5f14666e-d222-4d60-ad25-e01ea9ea3c45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_run.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/main.tf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,6 @@
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ansible/ansible.cfg" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ansible/deploy.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/infra/main.tf" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/infra/modules/ec2/main.tf" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/infra/modules/ec2/ssh-key.tf" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/source/index.html" root0="FORCE_HIGHLIGHTING" />
@@ -50,28 +49,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tuandang/Documents/Source/Others/FileSystemManager/.circleci&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/tuandang/Documents/Source/Others/FileSystemManager/docs",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/.circleci" />
       <recent name="$PROJECT_DIR$/ansible/roles/deploy" />
       <recent name="$PROJECT_DIR$/ansible/roles/mounting_folder" />
       <recent name="$PROJECT_DIR$/ansible" />
-      <recent name="$PROJECT_DIR$/infra/modules/vpc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/local" />
-      <recent name="$PROJECT_DIR$/source" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/source" />
     </key>
   </component>
   <component name="RunManager">
@@ -113,7 +112,9 @@
       <updated>1691822070351</updated>
       <workItem from="1691822072016" duration="6875000" />
       <workItem from="1691829019183" duration="36967000" />
-      <workItem from="1691920754767" duration="20365000" />
+      <workItem from="1691920754767" duration="21926000" />
+      <workItem from="1691979578798" duration="6000" />
+      <workItem from="1691979592906" duration="7231000" />
     </task>
     <servers />
   </component>

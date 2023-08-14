@@ -1,0 +1,17 @@
+version: "3"
+
+networks:
+  my_network:
+    driver: bridge
+services:
+  app:
+    networks:
+      - my_network
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "8080:5000"
+    restart: always
+    volumes:
+      - ./uploads:/app/uploads

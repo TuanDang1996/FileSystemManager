@@ -1,9 +1,9 @@
 # File Management System
 
-1. Tech stacks
-2. Architecture
-3. Pipeline
-4. Local run
+1. [Tech stacks](#tech-stacks)
+2. [Architecture](#architecture)
+3. [Pipeline](#pipeline)
+4. [Local run](./docs/local_run.md)
 
 ### Tech stacks
 This project is using these tech stacks: 
